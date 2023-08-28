@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-alias ffuf='ffuf -v -c -r -fc 403,500 -u '
+alias ,.='ffuf -v -c -r -fc 403,500'
 
 clear
 cd $HOME/wordlists
@@ -57,17 +57,16 @@ alias p='pwd'
 alias w='/bin/bash Wordlists.sh'
 alias ni='npm install -g'
 
+
 export PATH="~/go/bin/:$PATH"
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
-
 
 command_not_found_handle () {
        printf "";
 	clear
        return 127
 }
-
 
 function x {
   if [ -z "$1" ]; then
@@ -97,7 +96,6 @@ function x {
     fi
   fi
 }
-
 
 PS1='\$ '
 
