@@ -2,10 +2,10 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-alias .='ffuf -v -c -r -fc 403,500'
+alias ffuf='ffuf -v -c -r -fc 403,500 -u '
 
 clear
-cd /root/wordlists
+cd $HOME/wordlists
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
@@ -24,8 +24,7 @@ alias ..='cd ..'
 alias ls='exa -F'
 alias l='exa -l --sort=size'
 alias r='exa -R -S'
-#alias find='fd'
-alias k='docker start kali && docker exec -it kali bash'
+alias find='fdfind'
 alias rc='nano /etc/bashrc'
 alias ,,='nano'
 alias ,='pygmentize -g'
@@ -39,7 +38,7 @@ alias nall='nmap -F -iL scan --open -oN nall'
 alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
-alias ñ='apt-get -y update && apt-get -y -f upgrade && apt-get -y full-upgrade && apt-get -y -f  install kali-linux-large'
+alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y full-upgrade && apt-get -y -f install kali-linux-large'
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias n='nmap -F -v'
@@ -50,28 +49,25 @@ alias b='bash'
 alias f='neofetch'
 alias e='exit'
 alias g='git clone'
-alias drop='ssh root@143.198.146.147'
+alias d='ssh root@143.198.146.147'
 alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
-alias ar='apt autoremove -y'
+alias a='apt-get autoremove -y'
+alias p='pwd'
+alias w='/bin/bash Wordlists.sh'
+alias ni='npm install -g'
 
 export PATH="~/go/bin/:$PATH"
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
 
 command_not_found_handle () {
        printf "";
 	clear
        return 127
 }
+
 
 function x {
   if [ -z "$1" ]; then
@@ -101,6 +97,7 @@ function x {
     fi
   fi
 }
+
 
 PS1='\$ '
 
