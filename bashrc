@@ -2,8 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-alias ,.='ffuf -v -c -r -fc 403,500'
-
+alias ,.='ffuf -v -c -r -fc 500'
 clear
 cd $HOME/wordlists
 
@@ -49,7 +48,7 @@ alias b='bash'
 alias f='neofetch'
 alias e='exit'
 alias g='git clone'
-alias d='ssh root@143.198.146.147'
+alias dr='ssh root@143.198.146.147'
 alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
 alias a='apt-get autoremove -y'
@@ -57,9 +56,7 @@ alias p='pwd'
 alias w='/bin/bash Wordlists.sh'
 alias ni='npm install -g'
 
-
 export PATH="~/go/bin/:$PATH"
-
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
 command_not_found_handle () {
@@ -97,7 +94,9 @@ function x {
   fi
 }
 
+
 PS1='\$ '
+
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
