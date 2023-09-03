@@ -2,7 +2,8 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-alias ,.='ffuf -v -c -r -fc 500'
+alias ,.='ffuf -v -c -r -fc 500,403'
+
 clear
 cd $HOME/wordlists
 
@@ -15,6 +16,7 @@ bind 'set page-completions on'
 
 shopt -s autocd
 
+alias h='$HOME/wordlists'
 alias urls='gau $URL'
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
@@ -23,7 +25,7 @@ alias ..='cd ..'
 alias ls='exa -F'
 alias l='exa -l --sort=size'
 alias r='exa -R -S'
-alias find='fdfind'
+alias find='fd'
 alias rc='nano /etc/bashrc'
 alias ,,='nano'
 alias ,='pygmentize -g'
@@ -51,19 +53,23 @@ alias g='git clone'
 alias dr='ssh root@143.198.146.147'
 alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
-alias a='apt-get autoremove -y'
+alias ar='apt-get autoremove -y'
 alias p='pwd'
 alias w='/bin/bash Wordlists.sh'
 alias ni='npm install -g'
+alias cu='curlie -s -D - -o /dev/null -L $URL'
+alias ww='whatweb $URL'
 
 export PATH="~/go/bin/:$PATH"
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+
 
 command_not_found_handle () {
        printf "";
 	clear
        return 127
 }
+
 
 function x {
   if [ -z "$1" ]; then
@@ -94,9 +100,7 @@ function x {
   fi
 }
 
-
 PS1='\$ '
-
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
