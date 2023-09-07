@@ -39,6 +39,7 @@ alias nall='nmap -F -iL scan --open -oN nall'
 alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
+alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6'
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y full-upgrade && apt-get -y -f install kali-linux-large'
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
@@ -55,21 +56,22 @@ alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
 alias ar='apt-get autoremove -y'
 alias p='pwd'
-alias w='/bin/bash Wordlists.sh'
 alias ni='npm install -g'
-alias cu='curlie -s -D - -o /dev/null -L $URL'
+alias cu='curlie -s'
 alias ww='whatweb $URL'
+alias gi='go install'
+alias nf='npm fund'
+alias bash='sudo bash'
 
 export PATH="~/go/bin/:$PATH"
-function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
+function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
 command_not_found_handle () {
        printf "";
 	clear
        return 127
 }
-
 
 function x {
   if [ -z "$1" ]; then
@@ -100,7 +102,9 @@ function x {
   fi
 }
 
+
 PS1='\$ '
+
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
