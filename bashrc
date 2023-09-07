@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-alias ,.='ffuf -v -c -r -fc 500,403'
+alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 
 clear
 cd $HOME/wordlists
@@ -62,6 +62,7 @@ alias ww='whatweb $URL'
 alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
+alias push='git add --all; git status; git commit -m "update"; git push'
 
 export PATH="~/go/bin/:$PATH"
 
