@@ -58,11 +58,12 @@ alias ar='apt-get autoremove -y'
 alias p='pwd'
 alias ni='npm install -g'
 alias cu='curlie -s'
+alias cup='curl -x "127.0.0.1:8080" $URL'
 alias ww='whatweb $URL'
 alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
-alias push='git add --all; git status; git commit -m "update"; git push'
+alias push='cp $HOME/.bashrc $HOME/wordlists/bashrc/bashrc && git add --all; git status; git commit -m "update"; git push'
 
 export PATH="~/go/bin/:$PATH"
 
