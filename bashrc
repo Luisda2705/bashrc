@@ -23,6 +23,7 @@ alias cat='pygmentize -g'
 alias rm='rm -rf'
 alias ..='cd ..'
 alias ls='exa -F'
+alias la='exa -aF'
 alias l='exa -l --sort=size'
 alias r='exa -R -S'
 alias find='fd'
@@ -30,9 +31,9 @@ alias rc='nano $HOME/.bashrc'
 alias ,,='nano'
 alias ,='pygmentize -g'
 alias route='readlink -f'
-alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" '
-alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" '
-alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" '
+alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
+alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
+alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias md='mdless'
 alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
 alias nall='nmap -F -iL scan --open -oN nall'
@@ -58,14 +59,17 @@ alias ar='apt-get autoremove -y'
 alias p='pwd'
 alias ni='npm install -g'
 alias cu='curlie -s'
-alias cup='curl -x "127.0.0.1:8080" $URL'
+alias cu-pr='curl -x "127.0.0.1:8080" $URL'
 alias ww='whatweb $URL'
+alias w='whoami'
 alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
-alias push='cp $HOME/.bashrc $HOME/wordlists/bashrc/bashrc && git add --all; git status; git commit -m "update"; git push'
+alias push='git add --all; git status; git commit -m "update"; git push'
+alias pull='git pull'
 
 export PATH="~/go/bin/:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
@@ -104,9 +108,7 @@ function x {
   fi
 }
 
-
 PS1='\$ '
-
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
