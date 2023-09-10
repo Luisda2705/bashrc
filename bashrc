@@ -17,7 +17,7 @@ bind 'set page-completions on'
 shopt -s autocd
 
 alias h='$HOME/wordlists'
-alias urls='gau $URL'
+alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
@@ -44,6 +44,7 @@ alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-fr
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y full-upgrade && apt-get -y -f install kali-linux-large'
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
+alias tr='tree -L 2 -C -h --sort=size -r'
 alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
@@ -58,8 +59,8 @@ alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
 alias ar='apt-get autoremove -y'
 alias p='pwd'
 alias ni='npm install -g'
-alias cu='curlie -s'
-alias cu-pr='curl -x "127.0.0.1:8080" $URL'
+alias cu='curlie -s $URL'
+alias cupr='curl -x "127.0.0.1:8080" $URL'
 alias ww='whatweb $URL'
 alias w='whoami'
 alias gi='go install'
@@ -67,6 +68,7 @@ alias nf='npm fund'
 alias bash='sudo bash'
 alias push='git add --all; git status; git commit -m "update"; git push'
 alias pull='git pull'
+alias hak='echo https://$URL | hakrawler'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
@@ -115,3 +117,9 @@ shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
 LS_COLORS="$LS_COLORS:di=01;34"
+eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
