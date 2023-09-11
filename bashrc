@@ -17,7 +17,7 @@ bind 'set page-completions on'
 shopt -s autocd
 
 alias h='$HOME/wordlists'
-alias urls='gau $URL --o urls --verbose'
+alias url='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
@@ -69,6 +69,7 @@ alias bash='sudo bash'
 alias push='git add --all; git status; git commit -m "update"; git push'
 alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
+alias nab='naabu $URL'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
