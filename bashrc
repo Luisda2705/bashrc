@@ -26,7 +26,7 @@ alias ls='exa -F'
 alias la='exa -aF'
 alias l='exa -l --sort=size'
 alias r='exa -R -S'
-alias find='fd'
+alias find='fzf -e'
 alias rc='nano $HOME/.bashrc'
 alias ,,='nano'
 alias ,='pygmentize -g'
@@ -53,7 +53,7 @@ alias b='bash'
 alias f='neofetch'
 alias e='exit'
 alias g='git clone'
-alias dr='ssh root@143.198.146.147'
+alias dr='ssh root@144.126.222.42'
 alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
 alias ar='apt-get autoremove -y'
@@ -71,16 +71,20 @@ alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 
+
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
+
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+
 
 command_not_found_handle () {
        printf "";
 	clear
        return 127
 }
+
 
 function x {
   if [ -z "$1" ]; then
@@ -118,6 +122,7 @@ shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
 LS_COLORS="$LS_COLORS:di=01;34"
+
 eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
 export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
