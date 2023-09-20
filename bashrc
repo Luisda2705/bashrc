@@ -31,7 +31,7 @@ alias rc='nano $HOME/.bashrc'
 alias ,,='nano'
 alias ,='pygmentize -g'
 alias route='readlink -f'
-alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
+alias i='apt-get install -y'
 alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias md='mdless'
@@ -41,7 +41,7 @@ alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6'
-alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y full-upgrade && apt-get -y -f install kali-linux-large'
+alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade'
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
@@ -70,14 +70,13 @@ alias push='git add --all; git status; git commit -m "update"; git push'
 alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
-
+alias urc='cp $HOME/.bashrc $HOME/Bashrc/bashrc'
 
 export PATH="~/go/bin/:$PATH"
+
 export PATH=/opt/homebrew/bin:$PATH
 
-
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
-
 
 command_not_found_handle () {
        printf "";
