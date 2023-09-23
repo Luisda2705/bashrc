@@ -31,7 +31,7 @@ alias rc='nano $HOME/.bashrc'
 alias ,,='nano'
 alias ,='pygmentize -g'
 alias route='readlink -f'
-alias i='apt-get install -y'
+alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias md='mdless'
@@ -71,12 +71,12 @@ alias push='git add --all; git status; git commit -m "update"; git push'
 alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
-alias urc='cp $HOME/.bashrc $HOME/Bashrc/bashrc'
-alias repos='git clone https://github.com/Luisda2705/Bashrc.git && git clone https://github.com/Luisda2705/Tools.git && git clone https://github.com/Luisda2705/Misc.git'
-alias rmrepos='rm Bashrc/ && rm Tools/ && rm Misc/'
+alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc'
+alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git && git clone https://github.com/Luisda2705/Misc.git'
+alias rmrepos='rm bashrc/ && rm Tools/ && rm Misc/'
+
 
 export PATH="~/go/bin/:$PATH"
-
 export PATH=/opt/homebrew/bin:$PATH
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
