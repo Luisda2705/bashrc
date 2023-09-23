@@ -17,7 +17,7 @@ bind 'set page-completions on'
 shopt -s autocd
 
 alias h='$HOME/wordlists'
-alias url='gau $URL --o urls --verbose'
+alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
@@ -54,7 +54,7 @@ alias b='bash'
 alias f='neofetch'
 alias e='exit'
 alias g='git clone'
-alias dr='ssh root@144.126.222.42'
+alias dr='ssh root@159.223.206.182'
 alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
 alias ar='apt-get autoremove -y'
@@ -72,6 +72,7 @@ alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 alias urc='cp $HOME/.bashrc $HOME/Bashrc/bashrc'
+alias repos='git clone https://github.com/Luisda2705/Bashrc.git && git clone https://github.com/Luisda2705/Tools.git && git clone https://github.com/Luisda2705/Misc.git'
 
 export PATH="~/go/bin/:$PATH"
 
