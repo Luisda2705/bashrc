@@ -73,7 +73,7 @@ alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
 alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git'
-alias rmrep='rm bashrc/ && rm Tools/'
+alias rmrp='rm bashrc/ && rm Tools/'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
