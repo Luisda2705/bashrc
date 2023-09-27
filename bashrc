@@ -48,7 +48,7 @@ alias tr='tree -L 2 -C -h --sort=size -r'
 alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
-alias i='apt-get -y install'
+#alias i='apt-get -y install'
 alias install='apt-get -y install'
 alias b='bash'
 alias f='neofetch'
@@ -72,9 +72,8 @@ alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
-alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git'
-alias rmrepos='rm bashrc/ Tools/ Init/'
-
+alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git && git clone https://github.com/Luisda2705/Wordlist.git'
+alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
@@ -122,8 +121,7 @@ PS1='\$ '
 shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
-LS_COLORS="$LS_COLORS:di=01;36"
-
+LS_COLORS="$LS_COLORS:di=01;34"
 
 eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
