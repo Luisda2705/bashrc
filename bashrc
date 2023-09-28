@@ -42,7 +42,7 @@ alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
 #alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6'
-alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade'
+alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get autoremove -y'
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
@@ -74,7 +74,6 @@ alias nab='naabu $URL'
 alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
 alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git && git clone https://github.com/Luisda2705/Wordlist.git'
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/'
-
 
 
 export PATH="~/go/bin/:$PATH"
