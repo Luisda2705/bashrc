@@ -75,11 +75,8 @@ alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
 alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git && git clone https://github.com/Luisda2705/Wordlist.git'
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/'
 
-
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
-
-
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
