@@ -48,13 +48,12 @@ alias tr='tree -L 2 -C -h --sort=size -r'
 alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
-#alias i='apt-get -y install'
 alias install='apt-get -y install'
 alias b='bash'
 alias f='neofetch'
 alias e='exit'
 alias g='git clone'
-alias dr='ssh root@159.223.206.182'
+alias dr='ssh root@143.244.177.120'
 alias lg='ls -GF | rg'
 alias d='dog A AAAA CNAME MX NS PTR SOA $URL'
 alias ar='apt-get autoremove -y'
@@ -75,8 +74,12 @@ alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
 alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git && git clone https://github.com/Luisda2705/Wordlist.git'
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/'
 
+
+
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+
+
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
