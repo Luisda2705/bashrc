@@ -4,8 +4,10 @@ fi
 
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 
+
 clear
 cd $HOME/wordlists
+
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
@@ -41,8 +43,8 @@ alias nurls='nmap -F -iL urls --open -oN nurls'
 alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
-#alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6'
-alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get autoremove -y'
+alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6'
+alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-linux-everything && apt-get autoremove -y'
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
@@ -79,6 +81,7 @@ alias lnx='su lnx'
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
+
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
 command_not_found_handle () {
@@ -86,6 +89,7 @@ command_not_found_handle () {
 	clear
        return 127
 }
+
 
 function x {
   if [ -z "$1" ]; then
@@ -128,4 +132,3 @@ eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
 export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
 export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
-
