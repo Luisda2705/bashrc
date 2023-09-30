@@ -76,7 +76,6 @@ alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone htt
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/'
 alias lnx='su lnx'
 
-
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
