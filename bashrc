@@ -46,6 +46,7 @@ alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrad
 alias http=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
+alias tm='tmux'
 alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
