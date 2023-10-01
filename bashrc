@@ -2,6 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
+
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 
 clear
@@ -77,6 +78,7 @@ alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
 alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git && git clone https://github.com/Luisda2705/Wordlist.git && git clone https://github.com/Luisda2705/Request.git'
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/ Request/'
 alias lnx='su lnx'
+
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
