@@ -76,7 +76,7 @@ alias urc='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc; push'
 alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone https://github.com/Luisda2705/Tools.git; git clone https://github.com/Luisda2705/Init.git && git clone https://github.com/Luisda2705/Wordlist.git && git clone https://github.com/Luisda2705/Request.git'
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/ Request/'
 alias lnx='su lnx'
-
+alias fz='fzf -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
