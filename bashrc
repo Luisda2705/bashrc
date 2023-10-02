@@ -50,7 +50,7 @@ alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
 alias install='apt-get -y install'
-alias bins='brew install'
+alias binstall='brew install'
 alias b='sudo bash'
 alias f='neofetch'
 alias e='exit'
@@ -77,9 +77,11 @@ alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone htt
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/ Request/'
 alias lnx='su lnx'
 alias fz='fzf -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
+alias urclnx='cp $HOME/.bashrc /home/lnx/.bashrc'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
