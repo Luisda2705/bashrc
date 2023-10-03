@@ -79,7 +79,7 @@ alias lnx='su lnx'
 alias fz='fzf -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias urclnx='cp $HOME/.bashrc /home/lnx/.bashrc'
 alias bu='brew update && brew upgrade && brew cleanup'
-alias net='netstat -r'
+alias netr='netstat -r'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
