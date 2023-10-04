@@ -15,7 +15,7 @@ bind 'set page-completions on'
 
 shopt -s autocd
 
-alias h='$HOME/wordlists'
+alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
@@ -35,7 +35,7 @@ alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias md='mdless'
 alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
-alias nall='nmap -F -iL scan --open -oN nall'
+alias nscan='nmap -F -iL scan --open -oN nscan'
 alias nurls='nmap -F -iL urls --open -oN nurls'
 alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
@@ -127,7 +127,7 @@ PS1='\$ '
 shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
-LS_COLORS="$LS_COLORS:di=01;34"
+LS_COLORS="$LS_COLORS:di=01;33"
 
 eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
