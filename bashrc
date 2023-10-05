@@ -68,7 +68,7 @@ alias w='whoami'
 alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
-alias push='git add --all; git status; git commit -m "update"; git push;'
+alias push='git add .; git status; git commit -m "update"; git push;'
 alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
@@ -81,8 +81,10 @@ alias urclnx='cp $HOME/.bashrc /home/lnx/.bashrc'
 alias bu='brew update && brew upgrade && brew cleanup'
 alias netr='netstat -r'
 
+
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
