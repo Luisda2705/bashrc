@@ -81,7 +81,6 @@ alias bu='brew update && brew upgrade && brew cleanup'
 alias netr='netstat -rn'
 alias narc='cp /etc/nanorc $HOME/Tools/nanorc'
 
-
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
