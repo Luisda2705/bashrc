@@ -62,7 +62,7 @@ alias p='pwd'
 alias ni='npm install -g'
 alias cu='curlie -s $URL'
 alias cupr='curl -x "127.0.0.1:8080" $URL'
-alias ww='whatweb $URL'
+alias ww='whatweb --no-errors $URL'
 alias w='whoami'
 alias gi='go install'
 alias nf='npm fund'
@@ -78,7 +78,9 @@ alias lnx='su lnx'
 alias fz='fzf -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias urclnx='cp $HOME/.bashrc /home/lnx/.bashrc'
 alias bu='brew update && brew upgrade && brew cleanup'
-alias netr='netstat -r'
+alias netr='netstat -rn'
+alias narc='cp /etc/nanorc $HOME/Tools/nanorc'
+
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
