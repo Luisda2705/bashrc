@@ -6,6 +6,8 @@ alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
 cd $HOME/wordlists
 
+ssh root@147.182.198.158
+
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
 bind 'set show-all-if-ambiguous on'
