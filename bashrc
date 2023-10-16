@@ -80,9 +80,8 @@ alias urclnx='cp $HOME/.bashrc /home/lnx/.bashrc'
 alias bu='brew update && brew upgrade && brew cleanup'
 alias netr='netstat -rn'
 alias narc='cp /etc/nanorc $HOME/Tools/nanorc'
-alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on'
+alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
-alias p='sudo mitmproxy'
 
 
 export PATH="~/go/bin/:$PATH"
