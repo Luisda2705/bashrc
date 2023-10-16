@@ -84,6 +84,7 @@ alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewe
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
 alias p='sudo mitmproxy'
 
+
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
@@ -94,6 +95,7 @@ command_not_found_handle () {
 	clear
        return 127
 }
+
 
 function x {
   if [ -z "$1" ]; then
@@ -123,6 +125,7 @@ function x {
     fi
   fi
 }
+
 
 PS1='\$ '
 
