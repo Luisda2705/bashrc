@@ -25,12 +25,11 @@ alias ls='exa -F'
 alias la='exa -aF'
 alias l='exa -l --sort=size'
 alias r='exa -R -S'
-alias open=',, $(fz)'
-alias find='route $(fz)'
+alias read=',, $(fz)'
+alias find='readlink -f $(fz)'
 alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
-alias route='readlink -f'
 alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
@@ -83,6 +82,7 @@ alias narc='cp /etc/nanorc $HOME/Tools/nanorc'
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
 alias we='curl wttr.in/Zacatecas'
+
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
