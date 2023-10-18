@@ -83,7 +83,7 @@ alias netr='netstat -rn'
 alias narc='cp /etc/nanorc $HOME/Tools/nanorc'
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
-
+alias we='curl wttr.in/Zacatecas'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
