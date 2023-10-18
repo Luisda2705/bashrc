@@ -77,7 +77,6 @@ alias repos='git clone https://github.com/Luisda2705/bashrc.git && git clone htt
 alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/ Requests/'
 alias lnx='su lnx'
 alias fz='fzf --preview "bat --color "always" {}" -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
-alias urclnx='cp $HOME/.bashrc /home/lnx/.bashrc'
 alias bu='brew update && brew upgrade && brew cleanup'
 alias netr='netstat -rn'
 alias narc='cp /etc/nanorc $HOME/Tools/nanorc'
