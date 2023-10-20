@@ -2,6 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
+
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
 cd $HOME/wordlists
@@ -68,7 +69,7 @@ alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
 alias push='git add .; git status; git commit -m "$(date +"%T - %b/%d/%y" --date="6 hours ago")"; git push;'
-alias pushall='cd $HOME; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push'
+alias pushall='cd $HOME; fd . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push'
 alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
