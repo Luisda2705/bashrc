@@ -86,7 +86,6 @@ alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
 
-
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
