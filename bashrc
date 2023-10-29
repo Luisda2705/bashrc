@@ -84,6 +84,7 @@ alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecure
 alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
+alias request='cp Requests/req $HOME/wordlists/req'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
