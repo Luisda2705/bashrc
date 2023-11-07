@@ -73,7 +73,7 @@ alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date
 alias prc='cp $HOME/.bashrc $HOME/bashrc/bashrc; $HOME/bashrc; push; cd $OLDPWD'
 alias prp='$HOME; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status;find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push'
 alias repos='h; gh repo clone bashrc && gh repo clone Tools && gh repo clone Init && gh repo clone Wordlist && gh repo clone Requests; cd $OLDPWD'
-alias rmrepos='rm bashrc/ Tools/ Init/ Wordlist/ Requests/'
+alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ Requests/; cd $OLDPWD'
 alias lnx='su lnx'
 alias fz='fzf --preview "bat --color "always" {}" -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias bu='brew update && brew upgrade && brew cleanup'
