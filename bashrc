@@ -86,9 +86,9 @@ alias log='git log'
 alias df='df -h'
 alias request='cp Requests/req $HOME/wordlists/req'
 alias cmd=',, $HOME/Tools/Command'
+
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
-
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
