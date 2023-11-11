@@ -12,9 +12,7 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB: menu-complete'
 bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
-
 shopt -s autocd
-
 alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
