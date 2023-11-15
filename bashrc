@@ -29,6 +29,7 @@ alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
 alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
+alias ifc='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias md='mdless'
@@ -133,7 +134,7 @@ PS1='\$ '
 shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
-LS_COLORS="$LS_COLORS:di=01;33"
+LS_COLORS="$LS_COLORS:di=01;34"
 
 eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
