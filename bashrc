@@ -86,6 +86,7 @@ alias df='df -h'
 alias request='cp Requests/req $HOME/wordlists/req'
 alias cmd=',, $HOME/Tools/Command'
 alias Tools=',, $HOME/Tools/Tools.sh'
+alias fcmd='cat $HOME/Tools/Command | rg'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
