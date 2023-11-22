@@ -78,8 +78,10 @@ alias fz='fzf --preview "bat --color "always" {}" -e --color fg:188,bg:233,hl:10
 alias bu='brew update && brew upgrade && brew cleanup'
 alias netr='netstat -rn'
 alias cpnrc='cp /etc/nanorc $HOME/Tools/nanorc'
+
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
+
 alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
