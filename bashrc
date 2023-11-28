@@ -17,7 +17,7 @@ shopt -s autocd
 
 alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
-alias cd='HOME=~/wordlists cd'
+alias cd='HOME=~/ cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
 alias ..='cd ..'
