@@ -4,7 +4,7 @@ fi
 
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
-cd $HOME/wordlists
+cd $HOME
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
