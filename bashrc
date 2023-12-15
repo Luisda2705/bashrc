@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+#alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
 cd $HOME
 
@@ -80,17 +80,15 @@ alias fz='fzf --preview "bat --color "always" {}" -e --color fg:188,bg:233,hl:10
 alias bu='brew update && brew upgrade && brew cleanup'
 alias netr='netstat -rn'
 alias cpnrc='cp /etc/nanorc $HOME/Tools/nanorc'
-
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
-
 alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
 alias cmd=',, $HOME/Tools/Command'
-alias Tools=',, $HOME/Tools/Tools.sh'
 alias fcmd='cat $HOME/Tools/Command | rg'
+
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
@@ -145,3 +143,4 @@ eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
 export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
 export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+. "$HOME/.cargo/env"
