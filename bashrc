@@ -86,8 +86,8 @@ alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
-alias cmd=',, $HOME/Tools/Command'
-alias fcmd='cat $HOME/Tools/Command | rg'
+alias cmd=',, $HOME/Tools/Commands'
+alias fcmd='cat $HOME/Tools/Commands | rg'
 
 
 export PATH="~/go/bin/:$PATH"
