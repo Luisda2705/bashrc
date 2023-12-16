@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-#alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+alias ..='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
 cd $HOME
 
@@ -49,8 +49,8 @@ alias tm='tmux'
 alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
-alias inst='apt-get -y install'
-alias binst='brew install'
+alias install='apt-get -y install'
+alias binstall='brew install'
 alias ba='sudo bash'
 alias f='neofetch'
 alias e='exit'
