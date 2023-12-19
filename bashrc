@@ -4,7 +4,7 @@ fi
 
 alias ..='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
-cd $HOME
+cd $HOME/wordlists
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
@@ -17,7 +17,7 @@ shopt -s autocd
 
 alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
-alias cd='HOME=~/ cd'
+alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
 alias ..='cd ..'
@@ -88,6 +88,7 @@ alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
 alias cmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix -r'
+alias tools=',, $HOME/Tools/Tools.sh'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
