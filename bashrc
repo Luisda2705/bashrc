@@ -87,7 +87,7 @@ alias log='git log'
 alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
 alias cmd='cat $HOME/Tools/Commands | rg'
-alias c='cmatrix'
+alias c='cmatrix -r'
 alias tools=',, $HOME/Tools/Tools.sh'
 
 export PATH="~/go/bin/:$PATH"
