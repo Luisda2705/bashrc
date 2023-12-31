@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-#alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+alias ..='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
 cd $HOME/wordlists
 
@@ -87,7 +87,7 @@ alias log='git log'
 alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
 alias cmd='cat $HOME/Tools/Commands | rg'
-alias c='cmatrix -r'
+alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 
 export PATH="~/go/bin/:$PATH"
