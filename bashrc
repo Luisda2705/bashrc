@@ -90,8 +90,10 @@ alias cmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 
+
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+
 
 function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
@@ -143,4 +145,4 @@ eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
 export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
 export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
-. "$HOME/.cargo/env"
+
