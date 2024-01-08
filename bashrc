@@ -86,7 +86,7 @@ alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
-alias cmd='cat $HOME/Tools/Commands | rg'
+alias fcmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 
