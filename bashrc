@@ -89,7 +89,7 @@ alias request='cp HTTP/req $HOME/wordlists/req'
 alias cmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
-
+alias root='sudo su -'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
