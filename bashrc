@@ -74,7 +74,7 @@ alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date
 alias prc='cp $HOME/.bashrc $HOME/bashrc/bashrc; $HOME/bashrc; push; cd $OLDPWD'
 alias prp='$HOME; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status;find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $OLDPWD'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
-alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/; cd $OLDPWD'
+alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setups/ luisda2705/; cd $OLDPWD'
 alias lx='su lx'
 alias fz='fzf --preview "bat --color "always" {}" -e --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias bu='brew update && brew upgrade && brew cleanup'
