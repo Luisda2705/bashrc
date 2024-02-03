@@ -91,7 +91,6 @@ alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
 
-
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
