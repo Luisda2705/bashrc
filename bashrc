@@ -2,7 +2,6 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-
 alias ..='ffuf -v -c -r -fc 500,403 -request req -w'
 clear
 cd $HOME/wordlists
