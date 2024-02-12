@@ -54,7 +54,7 @@ alias ba='sudo bash'
 alias f='neofetch'
 alias e='exit'
 alias gc='git clone'
-alias dr='ssh root@'
+alias server='ssh root@$SERVER'
 alias lg='ls -GF | rg'
 alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
 alias p='pwd'
@@ -138,6 +138,9 @@ shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
 LS_COLORS="$LS_COLORS:di=01;34"
+
+#Variables
+SERVER=192.168.203.1
 
 eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
