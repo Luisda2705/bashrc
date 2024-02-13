@@ -5,13 +5,13 @@ fi
 cd $HOME/wordlists
 clear
 
+
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
 bind 'set show-all-if-ambiguous on'
 bind 'TAB: menu-complete'
 bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
-
 shopt -s autocd
 
 alias h='$HOME'
