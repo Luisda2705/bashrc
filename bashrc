@@ -4,8 +4,6 @@ fi
 
 cd $HOME/wordlists
 clear
-
-
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
 bind 'set show-all-if-ambiguous on'
