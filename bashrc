@@ -13,6 +13,8 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
+alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+
 alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
@@ -87,7 +89,6 @@ alias cmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
-alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 alias bat='batcat'
 
 export PATH="~/go/bin/:$PATH"
