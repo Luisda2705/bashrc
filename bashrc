@@ -2,6 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
+
 cd $HOME/wordlists
 clear
 bind 'set colored-stats on'
