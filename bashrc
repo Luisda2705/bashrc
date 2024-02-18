@@ -15,7 +15,7 @@ shopt -s autocd
 
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 
-alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:180,fg+:175,bg+:000,hl+:180 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
+alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:180,fg+:125,bg+:000,hl+:180 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
@@ -131,6 +131,9 @@ function x {
   fi
 }
 
+
+#bind 'RETURN: "\e[1~clear; \e[4~\n"'
+bind '"\C-m": "\C-l\C-j"'
 
 PS1='\$ '
 
