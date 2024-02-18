@@ -135,7 +135,6 @@ function x {
 #bind 'RETURN: "\e[1~clear; \e[4~\n"'
 bind '"\C-m": "\C-l\C-j"'
 
-
 PS1='\$ '
 
 # Make bash check its window size after a process completes
