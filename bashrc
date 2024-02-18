@@ -133,7 +133,11 @@ function x {
 
 
 #bind 'RETURN: "\e[1~clear; \e[4~\n"'
-bind '"\C-m": "\C-l\C-j"'
+#bind '"\C-m": "\C-l\C-j"'
+
+preexec () {
+  clear
+}
 
 PS1='\$ '
 
