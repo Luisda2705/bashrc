@@ -15,7 +15,7 @@ shopt -s autocd
 
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 
-alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:220,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
+alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:80,fg+:220,bg+:000,hl+:80 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias h='$HOME'
 alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
@@ -51,7 +51,7 @@ alias n='nmap -F -v'
 alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
 alias ins='apt-get -y install'
-alias binstall='brew install'
+alias bins='brew install'
 alias ba='sudo bash'
 alias f='neofetch'
 alias e='exit'
