@@ -42,7 +42,6 @@ alias nu='nmap -F $URL -v'
 alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6'
-alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; pr; rmrepos;'
 alias codes=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
@@ -72,12 +71,16 @@ alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 
-------- Update Github Repos ----------
+#------- Update Github Repos ----------
+
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
 alias pr='cp $HOME/.bashrc $HOME/bashrc/bashrc; $HOME; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status;find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $OLDPWD'
+alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
 alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/ Request/; cd $OLDPWD'
---------------------------------------
+alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
+
+#--------------------------------------
 
 alias lx='su lx'
 alias bru='brew update && brew upgrade && brew cleanup'
