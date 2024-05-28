@@ -74,7 +74,7 @@ alias pr='cp $HOME/.bashrc $HOME/bashrc/bashrc; $HOME; find . -maxdepth 2 -name 
 alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
 alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/ Request/; cd $OLDPWD'
-alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
+alias k='pr; apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
 #---------------------------------------#
 
 #--------Read Files and Print Route-----#
