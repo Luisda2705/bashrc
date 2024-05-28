@@ -68,22 +68,20 @@ alias pull='git pull'
 alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 
-#------- Update Github Repos ----------#
+#------- Update Github Repos -----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
 alias pr='cp $HOME/.bashrc $HOME/bashrc/bashrc; $HOME; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status;find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $OLDPWD'
 alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
 alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/ Request/; cd $OLDPWD'
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
-#--------------------------------------#
+#---------------------------------------#
 
-
-#-------------Read File Github---------#
+#--------Read Files and Print Route-----#
 alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:255,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rf=',, $(fz)'
 alias rt='readlink -f $(fz)'
-#--------------------------------------#
-
+#---------------------------------------#
 
 alias lx='su lx'
 alias brup='brew update && brew upgrade && brew cleanup'
