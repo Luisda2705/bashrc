@@ -78,7 +78,7 @@ alias k='pr; apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-up
 #---------------------------------------#
 
 #--------Read Files and Print Route-----#
-alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:255,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
+alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:155,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rf=',, $(fz)'
 alias rt='readlink -f $(fz)'
 #---------------------------------------#
