@@ -26,9 +26,6 @@ alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
 alias md='mdless'
-alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
-alias nscan='nmap -F -iL scan --open -oN nscan'
-alias nu='nmap -F $URL -v'
 alias URL='export URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6'
 alias codes=',, $HOME/wordlists/http-status-codes/README.md'
@@ -61,10 +58,15 @@ alias nab='naabu $URL'
 
 #------- Security Utilities-----------#
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+alias URL='export URL'
 alias urls='gau $URL --o urls --verbose'
 alias sub='subfinder -d $URL -o scan'
 alias ww='whatweb --no-errors $URL'
 alias w='whoami'
+alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
+alias nscan='nmap -F -iL scan --open -oN nscan'
+alias nu='nmap -F $URL -v'
+
 #-------------------------------------#
 
 #------- Update Github Repos -----------#
