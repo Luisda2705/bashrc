@@ -53,8 +53,6 @@ alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
 alias pull='git pull'
-alias hak='echo https://$URL | hakrawler'
-alias nab='naabu $URL'
 
 #------- Security Utilities-----------#
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
@@ -66,7 +64,8 @@ alias w='whoami'
 alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
 alias nscan='nmap -F -iL scan --open -oN nscan'
 alias nu='nmap -F $URL -v'
-
+alias nab='naabu $URL'
+alias hak='echo https://$URL | hakrawler'
 #-------------------------------------#
 
 #------- Update Github Repos -----------#
