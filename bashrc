@@ -14,19 +14,20 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-alias h='$HOME'
+#-------- Bash Commands ------#
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
-alias rm='rm -rf'
-alias ..='cd ..'
 
 #--------- Eza -------------#
 alias ls='eza -F'
 alias la='eza -aF'
 alias l='eza -l --sort=size -abgl --grid'
 alias r='eza -R -S'
-#---------------------------#
 
+
+alias h='$HOME'
+alias rm='rm -rf'
+alias ..='cd ..'
 alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
@@ -43,7 +44,7 @@ alias ba='sudo bash'
 alias f='neofetch'
 alias e='exit'
 alias gc='git clone'
-alias srv='ssh root@$SERVER'
+alias svr='ssh root@$SERVER'
 alias lg='ls -GF | rg'
 alias p='pwd'
 alias ni='npm install -g'
@@ -54,6 +55,19 @@ alias gi='go install'
 alias nf='npm fund'
 alias bash='sudo bash'
 alias pull='git pull'
+alias lx='su lx'
+alias brup='brew update && brew upgrade && brew cleanup'
+alias netr='netstat -rn'
+alias cpnano='cp /etc/nanorc $HOME/Tools/nanorc'
+alias we='curl wttr.in/Zacatecas'
+alias log='git log'
+alias df='df -h'
+alias request='cp HTTP/req $HOME/wordlists/req'
+alias cmd='cat $HOME/Tools/Commands | rg'
+alias c='cmatrix'
+alias tools=',, $HOME/Tools/Tools.sh'
+alias root='sudo su -'
+alias bat='batcat'
 
 #-------- Security Utilities -----------#
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
@@ -70,7 +84,6 @@ alias nu='nmap -F $URL -v'
 alias nab='naabu $URL'
 alias hak='echo https://$URL | hakrawler'
 alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
-#---------------------------------------#
 
 #------- Update Github Repos -----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
@@ -79,18 +92,11 @@ alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
 alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/ Request/; cd $OLDPWD'
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
-#---------------------------------------#
 
 #------ Read Files and Print Route -----#
 alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:175,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rf=',, $(fz)'
 alias rt='readlink -f $(fz)'
-#---------------------------------------#
-
-alias lx='su lx'
-alias brup='brew update && brew upgrade && brew cleanup'
-alias netr='netstat -rn'
-alias cpnano='cp /etc/nanorc $HOME/Tools/nanorc'
 
 #-------- Network Setup -------------#
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
@@ -99,17 +105,7 @@ alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 alias ifc='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
-#------------------------------------#
 
-alias we='curl wttr.in/Zacatecas'
-alias log='git log'
-alias df='df -h'
-alias request='cp HTTP/req $HOME/wordlists/req'
-alias cmd='cat $HOME/Tools/Commands | rg'
-alias c='cmatrix'
-alias tools=',, $HOME/Tools/Tools.sh'
-alias root='sudo su -'
-alias bat='batcat'
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
