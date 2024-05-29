@@ -5,6 +5,7 @@ fi
 
 cd $HOME/wordlists
 clear
+
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
 bind 'set show-all-if-ambiguous on'
@@ -18,22 +19,23 @@ alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
 alias ..='cd ..'
+
+#--------- Eza -------------#
 alias ls='eza -F'
 alias la='eza -aF'
 alias l='eza -l --sort=size -abgl --grid'
 alias r='eza -R -S'
+#---------------------------#
+
 alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
 alias md='mdless'
-alias URL='export URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6'
 alias codes=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
 alias tm='tmux'
-alias n='nmap -F -v'
-alias u='echo $URL'
 alias dec64='echo $DEC | base64 -d'
 alias ins='apt-get -y install'
 alias bins='brew install'
@@ -43,7 +45,6 @@ alias e='exit'
 alias gc='git clone'
 alias srv='ssh root@$SERVER'
 alias lg='ls -GF | rg'
-alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
 alias p='pwd'
 alias ni='npm install -g'
 alias cu='curlie -s $URL'
@@ -54,19 +55,22 @@ alias nf='npm fund'
 alias bash='sudo bash'
 alias pull='git pull'
 
-#------- Security Utilities-----------#
+#-------- Security Utilities -----------#
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
 alias URL='export URL'
+alias u='echo $URL'
 alias urls='gau $URL --o urls --verbose'
 alias sub='subfinder -d $URL -o scan'
 alias ww='whatweb --no-errors $URL'
 alias w='whoami'
+alias n='nmap -F -v'
 alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
 alias nscan='nmap -F -iL scan --open -oN nscan'
 alias nu='nmap -F $URL -v'
 alias nab='naabu $URL'
 alias hak='echo https://$URL | hakrawler'
-#-------------------------------------#
+alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
+#---------------------------------------#
 
 #------- Update Github Repos -----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
@@ -77,11 +81,11 @@ alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
 #---------------------------------------#
 
-#-------- Read Files and Print Route -----#
+#------ Read Files and Print Route -----#
 alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:175,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rf=',, $(fz)'
 alias rt='readlink -f $(fz)'
-#-----------------------------------------#
+#---------------------------------------#
 
 alias lx='su lx'
 alias brup='brew update && brew upgrade && brew cleanup'
@@ -97,7 +101,6 @@ alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 #------------------------------------#
 
-
 alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
@@ -107,7 +110,6 @@ alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
 alias bat='batcat'
-
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
