@@ -2,8 +2,8 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-cd $HOME/wordlists
 clear
+cd $HOME/wordlists
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
