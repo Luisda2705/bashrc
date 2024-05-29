@@ -13,10 +13,7 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-alias .='ffuf -v -c -r -fc 500,403 -request req -w'
-
 alias h='$HOME'
-alias urls='gau $URL --o urls --verbose'
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 alias rm='rm -rf'
@@ -32,7 +29,6 @@ alias md='mdless'
 alias nsub='nmap --script dns-brute --script-args dns-brute.domain=$URL,dns-brute.threads=6 -vv -oN scan'
 alias nscan='nmap -F -iL scan --open -oN nscan'
 alias nu='nmap -F $URL -v'
-alias sub='subfinder -d $URL -o scan'
 alias URL='export URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6'
 alias codes=',, $HOME/wordlists/http-status-codes/README.md'
@@ -55,7 +51,6 @@ alias p='pwd'
 alias ni='npm install -g'
 alias cu='curlie -s $URL'
 alias cupr='curl -x "127.0.0.1:8080" $URL'
-alias ww='whatweb --no-errors $URL'
 alias w='whoami'
 alias gi='go install'
 alias nf='npm fund'
@@ -65,8 +60,11 @@ alias hak='echo https://$URL | hakrawler'
 alias nab='naabu $URL'
 
 #------- Security Utilities-----------#
-
-
+alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+alias urls='gau $URL --o urls --verbose'
+alias sub='subfinder -d $URL -o scan'
+alias ww='whatweb --no-errors $URL'
+alias w='whoami'
 #-------------------------------------#
 
 #------- Update Github Repos -----------#
