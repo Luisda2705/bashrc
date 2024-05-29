@@ -23,7 +23,6 @@ alias la='eza -aF'
 alias l='eza -l --sort=size -abgl --grid'
 alias r='eza -R -S'
 
-
 alias h='$HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
@@ -47,7 +46,6 @@ alias svr='ssh root@$SERVER'
 alias lg='ls -GF | rg'
 alias p='pwd'
 alias ni='npm install -g'
-alias cu='curlie -s $URL'
 alias cupr='curl -x "127.0.0.1:8080" $URL'
 alias w='whoami'
 alias gi='go install'
@@ -83,6 +81,7 @@ alias nu='nmap -F $URL -v'
 alias nab='naabu $URL'
 alias hak='echo https://$URL | hakrawler'
 alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
+alias cu='curlie -s $URL'
 
 #------- Update Github Repos -----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
