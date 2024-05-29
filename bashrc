@@ -13,16 +13,6 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-#-------- General Commands ------#
-alias cd='HOME=~/wordlists cd'
-alias cat='pygmentize -g'
-
-#--------- Eza -------------#
-alias ls='eza -F'
-alias la='eza -aF'
-alias l='eza -l --sort=size -abgl --grid'
-alias r='eza -R -S'
-
 alias h='$HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
@@ -30,7 +20,7 @@ alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
 alias md='mdless'
-alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6'
+alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo t>'
 alias codes=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
@@ -65,6 +55,16 @@ alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
 alias bat='batcat'
+
+#-------- General Commands ------#
+alias cd='HOME=~/wordlists cd'
+alias cat='pygmentize -g'
+
+#--------- Eza -------------#
+alias ls='eza -F'
+alias la='eza -aF'
+alias l='eza -l --sort=size -abgl --grid'
+alias r='eza -R -S'
 
 #-------- Security Utilities -----------#
 alias .='ffuf -v -c -r -fc 500,403 -request req -w'
