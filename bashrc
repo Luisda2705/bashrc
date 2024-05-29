@@ -13,7 +13,7 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-#-------- Bash Commands ------#
+#-------- General Commands ------#
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 
