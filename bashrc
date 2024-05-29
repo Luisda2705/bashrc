@@ -2,7 +2,6 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-
 cd $HOME/wordlists
 clear
 
@@ -105,7 +104,6 @@ alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 alias ifc='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
-
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
