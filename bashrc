@@ -56,7 +56,7 @@ alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
 alias bat='batcat'
 
-#----------- General Commands ----------#
+#----------- General Bash ----------#
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
 
