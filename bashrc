@@ -2,6 +2,8 @@ if [ -z "$PS1" ]; then
    return
 fi
 
+SERVER=192.168.203.1
+
 clear
 cd $HOME/wordlists
 
@@ -33,19 +35,19 @@ alias sb='sudo bash'
 alias f='neofetch'
 alias e='exit'
 alias gc='git clone'
-alias svr='ssh root@$SERVER'
+alias server='ssh root@$SERVER'
 alias lg='ls -GF | rg'
 alias p='pwd'
 alias ni='npm install -g'
 alias cu-pr='curl $URL -x "127.0.0.1:8080"'
 alias w='whoami'
 alias gi='go install'
-alias nf='npm fund'
+alias npf='npm fund'
 alias bash='sudo bash'
 alias pull='git pull'
 alias lx='su lx'
-alias brup='brew update && brew upgrade && brew cleanup'
-alias netr='netstat -rn'
+alias bru='brew update && brew upgrade && brew cleanup'
+alias rn='netstat -rn'
 alias cpnano='cp /etc/nanorc $HOME/Tools/nanorc'
 alias we='curl wttr.in/Zacatecas'
 alias log='git log'
@@ -55,11 +57,11 @@ alias cmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix'
 alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
-alias bat='batcat'
 
 #----------- General Bash ----------#
 alias cd='HOME=~/wordlists cd'
 alias cat='pygmentize -g'
+alias bat='batcat'
 
 #------------- Eza ---------------------#
 alias ls='eza -F'
@@ -152,9 +154,6 @@ shopt -s checkwinsize
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
 LS_COLORS="$LS_COLORS:di=01;34"
-
-#Variables
-SERVER=192.168.203.1
 
 eval export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
