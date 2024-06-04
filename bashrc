@@ -15,6 +15,7 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
+
 #------ General Shell Commands -----#
 alias h='$HOME'
 alias rm='rm -rf'
@@ -46,7 +47,7 @@ alias npf='npm fund'
 alias bash='sudo bash'
 alias pull='git pull'
 alias lx='su lx'
-alias bru='brew update && brew upgrade && brew cleanup'
+alias brup='brew update && brew upgrade && brew cleanup'
 alias rn='netstat -rn'
 alias cpnano='cp /etc/nanorc $HOME/Tools/nanorc'
 alias we='curl wttr.in/Zacatecas'
