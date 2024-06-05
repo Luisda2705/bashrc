@@ -16,7 +16,7 @@ bind 'set page-completions on'
 shopt -s autocd
 
 
-#------ General Shell Commands -----#
+#------ No Categories -----#
 alias h='$HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
@@ -40,10 +40,10 @@ alias server='ssh root@$SERVER'
 alias lg='ls -GF | rg'
 alias p='pwd'
 alias ni='npm install -g'
-alias cu-pr='curl $URL -x "127.0.0.1:8080"'
+alias cupx='curl $URL -x "127.0.0.1:8080"'
 alias w='whoami'
 alias gi='go install'
-alias npf='npm fund'
+alias nf='npm fund'
 alias bash='sudo bash'
 alias pull='git pull'
 alias lx='su lx'
