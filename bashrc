@@ -23,7 +23,6 @@ alias rc=',, $HOME/.bashrc'
 alias ,,='nano -f /etc/nanorc'
 alias ,='pygmentize -g'
 alias md='mdless'
-alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo t>'
 alias httpcodes=',, $HOME/wordlists/http-status-codes/README.md'
 alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
@@ -85,6 +84,8 @@ alias nab='naabu $URL'
 alias hak='echo https://$URL | hakrawler'
 alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
 alias cu='curlie -s $URL'
+alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo t>'
+
 
 #------- Update Github Repos ----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
