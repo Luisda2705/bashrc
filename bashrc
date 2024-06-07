@@ -95,7 +95,7 @@ alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/
 alias k='repos; ubash; pr; rmrepos; apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y'
 
 #------ Read Files and Print Route -----#
-alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:110,fg+:110,bg+:000,hl+:110 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
+alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:140,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rt='readlink -f $(fz)'
 alias rf=',, $(fz)'
 
