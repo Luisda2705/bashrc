@@ -86,14 +86,13 @@ alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
 alias cu='curlie -s $URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo t>'
 
-
 #------- Update Github Repos ----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; git push'
 alias pr='cp $HOME/.bashrc $HOME/bashrc/bashrc; $HOME; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status;find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $OLDPWD'
 alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
 alias rmrepos='$HOME; rm bashrc/ Tools/ Init/ Wordlist/ HTTP/ Setup/ luisda2705/ Request/; cd $OLDPWD'
-alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y; repos; ubash; pr; rmrepos'
+alias k='repos; ubash; pr; rmrepos; apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge --autoremove -y'
 
 #------ Read Files and Print Route -----#
 alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:110,fg+:110,bg+:000,hl+:110 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
