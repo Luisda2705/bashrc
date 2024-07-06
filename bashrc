@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-SERVER=192.168.203.1
+SERVER=64.227.96.137
 
 clear
 cd $HOME/wordlists
