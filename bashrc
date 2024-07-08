@@ -2,7 +2,7 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-SERVER=64.227.96.137
+SERVER=161.35.239.218
 
 clear
 cd $HOME/wordlists
@@ -32,7 +32,7 @@ alias sb='sudo bash'
 alias f='neofetch'
 alias e='exit'
 alias gc='git clone'
-alias server='ssh root@$SERVER'
+alias serv='ssh root@$SERVER'
 alias p='pwd'
 alias ni='npm install -g'
 alias cupx='curl $URL -x "127.0.0.1:8080"'
