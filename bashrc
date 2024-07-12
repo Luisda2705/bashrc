@@ -5,7 +5,7 @@ fi
 SERVER=161.35.239.218
 
 clear
-cd $HOME/wordlists
+cd $HOME
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
@@ -55,7 +55,7 @@ alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
 
 #----------- General Bash ----------#
-alias cd='HOME=~/wordlists cd'
+alias cd='HOME=~/ cd'
 alias cat='pygmentize -g'
 alias bat='batcat'
 
@@ -69,7 +69,7 @@ alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
 
 #-------- Security Utilities -----------#
-alias .='ffuf -v -c -r -fc 500,403 -request req -w'
+alias .='ffuf -v -c -r -fc 500,403 -u https://URL/FUZZ -w'
 alias URL='export URL'
 alias u='echo $URL'
 alias urls='gau $URL --o urls --verbose'
