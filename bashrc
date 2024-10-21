@@ -16,7 +16,7 @@ bind 'set page-completions on'
 shopt -s autocd
 
 #------ No Category -----#
-alias h='$HOME'
+alias h='cd $HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
 alias ,='nano -f /etc/nanorc'
@@ -90,7 +90,7 @@ alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y" --date
 alias prp='ubash; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $OLDPWD'
 alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
-alias rmrep='$HOME; rm *; cd $OLDPWD'
+alias rmrep='cd $HOME; rm *; cd $OLDPWD'
 alias k='ubash; prepos; rmrepos; repos; apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge -y && apt autoremove -y'
 
 #------ Read Files and Print Route -----#
@@ -105,7 +105,6 @@ alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 alias ifc='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
-
 
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
