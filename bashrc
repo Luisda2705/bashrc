@@ -21,9 +21,9 @@ alias rm='rm -rf'
 alias ..='cd ..'
 alias ,='nano -f /etc/nanorc'
 alias ,,='pygmentize -g'
-alias rc=',, $HOME/.bashrc'
+alias rc=', $HOME/.bashrc'
 alias md='mdless'
-alias httpcodes=',, $HOME/wordlists/http-status-codes/README.md'
+alias httpcodes=', $HOME/wordlists/http-status-codes/README.md'
 alias tm='tmux'
 alias dec64='echo $DEC | base64 -d'
 alias ins='apt-get -y install'
@@ -51,7 +51,6 @@ alias df='df -h'
 alias request='cp HTTP/req $HOME/wordlists/req'
 alias cmd='cat $HOME/Tools/Commands | rg'
 alias c='cmatrix'
-alias tools=',, $HOME/Tools/Tools.sh'
 alias root='sudo su -'
 
 #----------- General Bash ----------#
@@ -97,7 +96,7 @@ alias k='ubash; prepos; rmrepos; repos; apt-get -y update && apt-get -y -f upgra
 #------ Read Files and Print Route -----#
 alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:140,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rt='readlink -f $(fz)'
-alias rf=',, $(fz)'
+alias rf=', $(fz)'
 
 #------------ Network Setup ------------#
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
