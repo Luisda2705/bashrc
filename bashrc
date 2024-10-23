@@ -19,7 +19,7 @@ alias h='cd $HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
 alias ,='nano -f /etc/nanorc'
-alias ,,='pygmentize -g'
+alias ,,='bat'
 alias rc=', $HOME/.bashrc'
 alias md='mdless'
 alias httpcodes=', $HOME/wordlists/http-status-codes/README.md'
@@ -108,7 +108,7 @@ alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 export PATH="~/go/bin/:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
-function decu() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+function dec-url() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
 #command_not_found_handle () {
 #       printf "";
