@@ -2,7 +2,6 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-
 SERVER=161.35.239.218
 clear
 cd $HOME
