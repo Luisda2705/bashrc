@@ -3,7 +3,6 @@ if [ -z "$PS1" ]; then
 fi
 
 SERVER=161.35.239.218
-clear
 cd $HOME
 
 bind 'set colored-stats on'
