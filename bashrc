@@ -13,7 +13,7 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-#------ No Category -----#
+#------ No Category ------#
 alias h='cd $HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
