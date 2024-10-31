@@ -110,11 +110,11 @@ export PATH="/opt/homebrew/bin/:$PATH"
 
 function dec-url() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
-#command_not_found_handle () {
-#       printf "";
-#	clear
-#       return 127
-#}
+command_not_found_handle () {
+       printf "";
+	clear
+       return 127
+}
 
 function x {
   if [ -z "$1" ]; then
