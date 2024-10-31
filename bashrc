@@ -14,7 +14,7 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-#------ No Category ------#
+#------- No Category -------#
 alias h='cd $HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
@@ -84,7 +84,7 @@ alias d='dog $URL A AAAA NS MX CNAME TXT PTR SOA'
 alias cu='curlie -s $URL'
 alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo t>'
 
-#-------- Update Github Repos ------------#
+#-------- Update Github Repos ----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y")"; git push'
 alias pre='ubash; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $HOME'
 alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc && push; cd $HOME/'
@@ -92,12 +92,12 @@ alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do 
 alias rmrepos='cd $HOME; rm *; cd $OLDPWD'
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge -y && apt autoremove -y'
 
-#------- Read Files and Print Route -------#
+#------- Read Files and Print Route ------#
 alias fz='fzf --preview "batcat --color "always" {}" -e --color fg:255,bg:000,hl:140,fg+:140,bg+:000,hl+:140 --color info:183,prompt:110,spinner:107,pointer:167,marker:215'
 alias rt='readlink -f $(fz)'
 alias rf=', $(fz)'
 
-#---------- Network Setup -----------#
+#---------- Network Setup -------------#
 alias on='networksetup -setwebproxystate "Wi-fi" on && networksetup -setsecurewebproxystate "Wi-fi" on && sudo mitmproxy'
 alias off='networksetup -setwebproxystate "Wi-fi" off && networksetup -setsecurewebproxystate "Wi-fi" off'
 alias ifconfig='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
@@ -106,7 +106,7 @@ alias i='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias ip='ifconfig | rg -e "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 
 export PATH="~/go/bin/:$PATH"
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin/:$PATH"
 
 function dec-url() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
