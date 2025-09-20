@@ -52,7 +52,7 @@ alias c='cmatrix -r'
 alias root='sudo su -'
 
 #------------ General Bash ------------#
-alias cd='HOME=~/ cd'
+alias cd='HOME=/Users/luis'
 alias cat='pygmentize -g'
 alias bat='batcat'
 
