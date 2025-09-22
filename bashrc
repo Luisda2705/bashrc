@@ -3,7 +3,6 @@ if [ -z "$PS1" ]; then
 fi
 
 clear
-clear
 cd $HOME
 
 bind 'set colored-stats on'
