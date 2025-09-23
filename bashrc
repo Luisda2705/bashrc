@@ -66,7 +66,7 @@ alias t='tree -L 1 -C -h -i --sort=size -r'
 alias tr='tree -L 2 -C -h --sort=size -r'
 
 #-------- Security Utilities -----------#
-alias .='ffuf -v -c -r -fc 500,403 '
+alias ff='ffuf -v -c -r -fc 500,403 '
 alias URL='export URL'
 alias u='echo $URL'
 alias urls='gau $URL --o urls --verbose'
