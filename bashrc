@@ -53,8 +53,7 @@ alias root='sudo su -'
 
 #------------ General Bash ------------#
 alias cd='HOME=/Users/luis'
-alias cat='pygmentize -g'
-alias bat='batcat'
+#alias cat='pygmentize -g'
 
 #------------- List Files --------------#
 alias ls='eza -F'
@@ -85,7 +84,7 @@ alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-fr
 
 #-------- Update Github Repos ----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y")"; git push'
-alias prp='ubash; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $HOME'
+alias pre='ubash; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push; cd $HOME'
 alias ubash='cp $HOME/.bashrc $HOME/bashrc/bashrc; cd $HOME/bashrc && push; cd $HOME/'
 alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME; rm Luisda2705/; cd $OLDPWD'
 alias rmrepos='rm bashrc/ Tools/ Setup/ Request/ Installer/ Wordlist/ Luisda2705/ Wes-byte/'
