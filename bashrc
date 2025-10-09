@@ -17,7 +17,7 @@ shopt -s autocd
 alias h='cd $HOME'
 alias rm='rm -rf'
 alias ..='cd ..'
-alias ,='nano -f /private/etc/nanorc'
+alias nano='nano -f /private/etc/nanorc'
 alias ,,='batcat'
 alias rc=', $HOME/.bashrc'
 alias md='mdless'
